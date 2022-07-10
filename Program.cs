@@ -17,11 +17,13 @@ namespace JuniorHomeWork
             Console.WriteLine("Случайное число равно " + number + " для нахождения минимальной степени " + baseNumber + ", превосходящей данное число нажмите любую клавишу ");
             Console.ReadLine();
 
-            while (Math.Pow(baseNumber, degree) <= number)
+            do
             {
                 degree++;
-               minDegree = Convert.ToInt32(Math.Pow(baseNumber, degree));
+                minDegree = Convert.ToInt32(Math.Pow(baseNumber, degree));
             }
+            while (minDegree <= number);
+
             Console.WriteLine("Минимальная степень равна " + degree);
 
         }
